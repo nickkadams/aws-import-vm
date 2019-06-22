@@ -1,0 +1,36 @@
+{
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "region": "{{user `aws_region`}}",
+            "instance_type": "{{user `aws_instance`}}",
+            "ami_name": "{{user `vm_name`}}_{{isotime \"2006-01-02\"}}",
+            "user_data_file": "./scripts/SetUpWinRM.ps1",
+            "communicator": "winrm",
+            "winrm_username": "Administrator",
+            "winrm_use_ssl": true,
+            "winrm_insecure": true,
+            "source_ami_filter": {
+                "filters": {
+                  "name": "Windows_Server-2019-English-Full-Base-*"
+                },
+                "owners": ["801119661308"],
+                "most_recent": true
+            }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "powershell",
+            "scripts": [
+                "./scripts/SetUpChocolatey.ps1"
+            ]
+        },
+        {
+        "type": "powershell","inline": [
+            "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\SendWindowsIsReady.ps1 -Schedule",
+            "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\InitializeInstance.ps1 -Schedule",
+            "C:\\ProgramData\\Amazon\\EC2-Windows\\Launch\\Scripts\\SysprepInstance.ps1 -NoShutdown"
+         ]
+    }]
+}

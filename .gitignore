@@ -1,0 +1,42 @@
+# MacOS
+.DS_Store
+
+# Cache objects
+packer_cache/
+
+# OVF output
+output-*/
+
+# For built boxes
+*.box
+
+# Manifest
+packer-manifest.json
+
+# For secrets
+variables.json
+
+# Crash log
+crash.log
+
+# ISOs
+*.iso
+
+# Compiled files
+*.tfstate
+*.tfstate.backup
+
+# Module directory
+.terraform/
+
+# Lock file
+.terraform.tfstate.lock.info
+
+# .tfvars files
+*.tfvars
+
+# variables.tf
+variables.tf
+
+# Ansible retry
+*.retry

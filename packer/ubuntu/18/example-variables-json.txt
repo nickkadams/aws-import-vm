@@ -1,0 +1,23 @@
+{
+  "vm_name": "ubuntu18",
+  "vm_username": "ansible",
+  "esxi_host": "ESXI_HOST",
+  "esxi_datastore": "ds00",
+  "esxi_username": "root",
+  "esxi_password": "ESXI_PASSWORD",
+  "vm_network": "vlan0",
+  "vm_mac": "00:00:00:00:00:00",
+  "vcsa_host": "VCSA_HOST",
+  "vcsa_username": "administrator@vsphere.local",
+  "vcsa_password": "VCSA_PASSWORD",
+  "vcsa_datacenter": "DATACENTER",
+  "vcsa_folder": "/templates",
+  "aws_access_key1": "AK000000000000000000",
+  "aws_secret_key1": "a100000000000000000000000000000000000000",
+  "aws_region1": "us-east-1",
+  "aws_s3_bucket_name1": "vmimport-1234abcd",
+  "aws_access_key2": "AK000000000000000000",
+  "aws_secret_key2": "a100000000000000000000000000000000000000",
+  "aws_region2": "us-east-2",
+  "aws_s3_bucket_name2": "vmimport-5678efgh"
+}

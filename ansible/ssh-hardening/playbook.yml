@@ -1,0 +1,16 @@
+---
+- hosts: ubuntu_instances
+  roles:
+    - ssh-hardening
+  vars:
+    network_ipv6_enable: false
+    ssh_listen_to: "['0.0.0.0']"
+    ssh_server_password_login: false
+    ssh_permit_root_login: "no"
+    ssh_print_motd: false
+    ssh_challengeresponseauthentication: false
+    ssh_use_pam: true
+    sftp_enabled: true
+    ssh_use_dns: false
+    sshd_custom_options:
+      - "AcceptEnv LANG LC_*"
