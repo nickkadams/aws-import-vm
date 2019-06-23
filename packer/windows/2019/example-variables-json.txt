@@ -1,0 +1,5 @@
+{
+  "aws_region": "us-east-2",
+  "aws_instance": "t2.micro",
+  "vm_name": "win2019"
+}
