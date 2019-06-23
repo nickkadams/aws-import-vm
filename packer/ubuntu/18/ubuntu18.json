@@ -149,6 +149,16 @@
       }
     },
     {
+      "type": "shell-local",
+      "inline": [ "ovftool 'output-{{user `vm_name`}}/{{user `vm_name`}}_{{isotime \"2006-01-02\"}}.vmwarevm/{{user `vm_name`}}_{{isotime \"2006-01-02\"}}.vmx' 'output-{{user `vm_name`}}/{{user `vm_name`}}_{{isotime \"2006-01-02\"}}.vmwarevm/{{user `vm_name`}}_{{isotime \"2006-01-02\"}}.ova'" ]
+      },
+      {
+        "files": [
+          "output-{{user `vm_name`}}/{{user `vm_name`}}_{{isotime \"2006-01-02\"}}.vmwarevm/{{user `vm_name`}}_{{isotime \"2006-01-02\"}}.ova"
+        ],
+        "type": "artifice"
+    },
+    {
       "type": "amazon-import",
       "access_key": "{{user `aws_access_key2`}}",
       "secret_key": "{{user `aws_secret_key2`}}",

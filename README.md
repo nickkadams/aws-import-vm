@@ -1,8 +1,6 @@
-# aws-import-vm
-
 ## Description
 
-A packer config for creating a VMware template on vCenter and exporting the OVA for import into AWS as a custom AMI (2 regions).
+A packer config for creating a VMware template on vCenter and exporting the OVA for import into AWS as a custom AMI (2 accounts/regions).
 
 ## Software Requirements
 
@@ -24,23 +22,30 @@ Instructions: https://blog.ukotic.net/2019/03/05/configuring-esxi-prerequisites-
 
 ## AWS Requirements
 
-* S3 bucket for VM/OVA import/export
-* VM import service role and policy
+* S3 bucket per region for VM/OVA import/export
+* VM import service role and policy per region
 
 Instructions: https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html
 
 ## Troubleshooting
 
-# OVA upload
+OVA upload:
+```
 aws --profile=YOUR_PROFILE s3api list-multipart-uploads --bucket my-import-bucket
+```
 
-# Import process
+Import process:
+```
 aws --profile=YOUR_PROFILE ec2 describe-import-image-tasks
+```
 
-# ToDo
+## ToDo
 
-Terraform IAM to restrict API calls from source IP:
+* Terraform IAM to restrict API calls from source IP:
 https://aws.amazon.com/premiumsupport/knowledge-center/iam-restrict-calls-ip-addresses/
+* Review Linux AMI guideline compliance and allow custom SSH key:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/building-shared-amis.html
+* Terraform S3 and EBS Lifecycle cleanup
 
 ## License and Author
 

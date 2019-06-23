@@ -1,5 +1,5 @@
-# packer-vsphere
-Packer Ubuntu 18.04 Image for vSphere
+## packer-vsphere-aws
+Packer Ubuntu 18.04 Image for vSphere to import to AWS AMI
 
 Command:
 ```
