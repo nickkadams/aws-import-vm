@@ -7,9 +7,10 @@ cp example-variables-json.txt variables.json
 vim variables.json
 ```
 
-Software:
+Config:
 ```
 vim scripts/SetUpChocolatey.ps1
+vim win2019.json
 ```
 
 Build:
