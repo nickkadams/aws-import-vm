@@ -4,19 +4,23 @@ A packer config for creating a VMware template on vCenter and exporting the OVA 
 
 ## Software Requirements
 
-* aws-cli > 1.16.180
-* Ansible > 2.7
-* Packer > 1.4.1
-* sshpass > 1.06 https://gist.github.com/arunoda/7790979
-* terraform > 0.12.2
-* VMware ovftool > 4.3.0 (build-12320924) https://code.vmware.com/web/tool/4.3.0/ovf
+Tested with:
+* ansible 2.7
+* aws-cli 1.16.180
+* ovftool 4.3.0 (build-12320924) https://code.vmware.com/web/tool/4.3.0/ovf
+* packer 1.4.1
+* sshpass 1.06 https://gist.github.com/arunoda/7790979
+* terraform 0.12.2
 
 ## VMware Requirements
 
-* ESXi > 6.7
-* vCenter > 6.7
-* SSH/22 open temporarily to a single ESXi server
-* VNC/5900-5911 open to a single ESXi server
+Tested with:
+* ESXi 6.7
+* vCenter 6.7
+
+Ports:
+* SSH/TCP 22 open temporarily to a single ESXi server
+* VNC/TCP 5900-5911 open to a single ESXi server
 
 Instructions: https://blog.ukotic.net/2019/03/05/configuring-esxi-prerequisites-for-packer/
 
