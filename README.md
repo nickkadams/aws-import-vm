@@ -27,7 +27,7 @@ Instructions: https://blog.ukotic.net/2019/03/05/configuring-esxi-prerequisites-
 ## AWS Requirements
 
 * S3 bucket per region for VM/OVA import/export
-* VM import service role and policy per region
+* VM import service role and policy per account
 
 Instructions: https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-image-import.html
 
